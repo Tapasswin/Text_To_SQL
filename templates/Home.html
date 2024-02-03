@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 >ASK AI</h1>
+
+<form action="{{ url_for('answer')}}" method="post">
+  <label for="question">Question: </label>
+  <input type="text" id="question" name="question" size="100"><br><br>
+  <input type="submit" value="Submit">
+  <table>
+    <td>
+      <h3 style = "color: blue"> Time Taken: {{time}} </h3>
+    </td>
+  </table>
+  
+</form>
+
+<table>
+  <tr>
+    <td><h1> Query: </h1></td>
+    <tr></tr>
+    <td><h2 style="color:red">{{query}}</h2></td>
+  </tr>
+  <tr>
+    <td><h1> Response: </h1></td>
+    <tr></tr>
+    <td><h2 style="color:red">{{answer}}</h2></td>
+  </tr>
+</table>
+
+</body>
+</html>
